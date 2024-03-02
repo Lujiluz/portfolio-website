@@ -15,67 +15,39 @@ body {
   width: fit-content;
 }
 
-.logo > span {
-  background-color: rgb(35, 35, 35, 80%);
-  padding: 0.5rem 1rem;
-  border-radius: 70px;
-  height: fit-content;
-  font-size: 1.2rem;
-  margin-left: 10px;
+.logo > h1 {
+  color: #ffe600;
 }
 
-.hero-img {
-  width: 20%;
-  border-radius: 50%;
+.nav-link:hover {
+  color: #ffe600;
 }
 
-.ellipse {
-  position: absolute;
-  left: 120px;
-  top: 1px;
-  z-index: -1;
+/* hero section styling */
+.hero-text {
+  margin: 50px 0 60px 0;
+}
+.hero-text > h1 {
+  font-weight: bold;
+  padding-bottom: 20px;
+  letter-spacing: 0.3em;
 }
 
-#home {
-  width: 100%;
-  margin-top: 80px;
-  /* border: 1px solid black; */
-}
-
-#home > .hero-text {
-  font-weight: lighter;
-  font-size: 1rem;
-}
-
-#home > .hero-text h1 {
-  font-size: 6rem;
-  font-weight: 500;
-  letter-spacing: 5px;
+.hero-text .special-word {
+  color: #ffe600;
 }
 
 .cta-link {
   text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.cta {
-  border: 1.5px solid white;
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
   padding: 10px 20px;
-  margin: 20px auto 10px auto;
-}
-
-.cta:hover {
-  border: 1.5px solid white;
-  background-color: white;
-  color: black;
-  transition: 500ms;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  color: white;
 }
 
 .cta-link:hover {
+  border: 2px solid #ffe600;
+  background-color: #ffe600;
   color: black;
-  transition: 500ms;
+  transition: 0.4s ease;
 }

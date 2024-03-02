@@ -15,26 +15,26 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container-fluid">
         <div class="logo">
-          <h1 class="fs-2">Lj.</h1>
+          <h1 class="fs-3">Lj.</h1>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto me-5">
-            <li class="nav-item me-4">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item me-2">
               <a class="nav-link" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item me-4">
-              <a class="nav-link" href="#">About</a>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item me-4">
+            <li class="nav-item me-2">
               <a class="nav-link" href="#">Projects</a>
             </li>
-            <li class="nav-item me-4">
+            <li class="nav-item me-2">
               <a class="nav-link" href="#">Contact</a>
               <span class="hover-effect"></span>
             </li>
@@ -56,10 +56,32 @@
           a programmer, a poet, a human being.
         </p>
       </div>
-      <a href="#" class="cta-link rounded-pill">Know me better</a>
+      <a href="#about" class="cta-link rounded-pill">Know me better</a>
     </section>
-
     <!-- end of hero section -->
+    <!-- about section-->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <h1 class="col about-header">About Me</h1>
+        </div>
+        <div class="row text-center">
+          <div class="about-img col-6">
+            <img src="./assets/luji.jpg" class="rounded shadow" />
+          </div>
+          <div class="about-text col-5 d-flex flex-column align-items-center rounded">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, at! Pariatur iste nesciunt exercitationem ut laboriosam neque excepturi? Non sed esse recusandae voluptatem tempora quaerat ducimus eius atque quis obcaecati
+              dolorem ex et aut placeat, quam, voluptate magni distinctio quibusdam reprehenderit doloribus officia. Quod unde culpa tempore praesentium? Asperiores, error.
+            </p>
+            <div class="skills rounded">
+              <img src="./assets/icons.png" alt="skills" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about section -->
 
     <!-- bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

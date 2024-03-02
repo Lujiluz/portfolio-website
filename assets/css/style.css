@@ -8,11 +8,74 @@ body {
   color: #fff;
 }
 
-.title {
-  background-color: #1e1e1e90;
-  padding: 10px;
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: fit-content;
 }
 
-.navbar {
-  background-color: #1e1e1e;
+.logo > span {
+  background-color: rgb(35, 35, 35, 80%);
+  padding: 0.5rem 1rem;
+  border-radius: 70px;
+  height: fit-content;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.hero-img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.ellipse {
+  position: absolute;
+  left: 120px;
+  top: 1px;
+  z-index: -1;
+}
+
+#home {
+  width: 100%;
+  margin-top: 80px;
+  /* border: 1px solid black; */
+}
+
+#home > .hero-text {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+#home > .hero-text h1 {
+  font-size: 6rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.cta-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.cta {
+  border: 1.5px solid white;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 20px auto 10px auto;
+}
+
+.cta:hover {
+  border: 1.5px solid white;
+  background-color: white;
+  color: black;
+  transition: 500ms;
+}
+
+.cta-link:hover {
+  color: black;
+  transition: 500ms;
 }

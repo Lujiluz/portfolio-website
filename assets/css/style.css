@@ -89,6 +89,10 @@ body {
 }
 
 /* projects section style */
+#projects > .container {
+  margin-top: 30px;
+  padding-top: 60px;
+}
 .tech-stack {
   border: 1px solid #ffe600;
   margin-top: 30px;

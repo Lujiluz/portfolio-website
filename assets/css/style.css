@@ -25,7 +25,7 @@ body {
 
 /* hero section styling */
 #home {
-  height: 80vh;
+  height: 60vh;
 }
 .hero-text {
   margin: 50px 0 60px 0;
@@ -56,10 +56,10 @@ body {
 }
 
 /* about section styling */
-#about {
+#about > .container {
   margin-top: 30px;
+  margin-bottom: 100px;
   padding-top: 60px;
-  height: 100vh;
   width: 100%;
 }
 
@@ -83,4 +83,26 @@ body {
 
 .skills img {
   width: 250px;
+}
+
+/* projects section style */
+.tech-stack {
+  border: 1px solid #ffe600;
+  margin-top: 30px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.card-body > h5 > a {
+  text-decoration: none;
+  color: white;
+}
+
+.card-body > h5 > a:hover {
+  text-decoration: none;
+  color: #ffe600;
+}
+
+.card {
+  box-shadow: 0 0.3rem 1rem #ffe60042;
 }

@@ -11,7 +11,6 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  padding: 20px;
   width: fit-content;
 }
 
@@ -23,9 +22,13 @@ body {
   color: #ffe600;
 }
 
+.navbar {
+  background-color: #1e1e1e;
+}
+
 /* hero section styling */
 #home {
-  height: 60vh;
+  height: 65vh;
 }
 .hero-text {
   margin: 50px 0 60px 0;
@@ -105,4 +108,43 @@ body {
 
 .card {
   box-shadow: 0 0.3rem 1rem #ffe60042;
+}
+
+/* contact section styling */
+#contact {
+  height: 80vh;
+  margin-top: 80px;
+  background-color: #ffe600;
+  color: black;
+}
+
+.myForm {
+  width: 95%;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  box-shadow: 0 0.3rem 1rem #0000009d;
+}
+
+.btn-msg {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #ffe600;
+}
+.btn-msg:hover {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #ffe600;
+  color: black;
+  border: 1px solid #ffe600;
+  transition: 0.4s ease;
+}
+
+.social-media {
+  margin-top: 20px;
+  padding: 5px 10px;
+  height: fit-content;
 }

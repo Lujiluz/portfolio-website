@@ -29,28 +29,38 @@
         <div class="logo">
           <h1 class="fs-3">Lj.</h1>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item me-3">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item me-3">
-              <a class="nav-link" href="#contact">Contact</a>
-              <span class="hover-effect"></span>
-            </li>
-          </ul>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <div class="logo">
+              <h1 class="fs-3">Lj.</h1>
+            </div>
+            <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item me-3">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#contact">Contact</a>
+                <span class="hover-effect"></span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
+
     <!-- end of navbar -->
 
     <!-- hero section -->
@@ -65,30 +75,30 @@
           a programmer, a poet, a human being.
         </p>
       </div>
-      <a href="#about" class="cta-link rounded-pill">Know me better</a>
+      <div class="cta-container">
+        <a href="#about" class="cta-link rounded-pill">Know me better</a>
+      </div>
     </section>
     <!-- end of hero section -->
     <!-- about section-->
-    <section id="about" class="mb-5">
-      <div class="container">
-        <div class="row text-center mb-5">
-          <h1 class="col about-header">About Me</h1>
-        </div>
-        <div class="row text-center">
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="about-img">
-              <img src="../static/assets/luji.jpg" class="rounded shadow" />
-            </div>
+    <section id="about">
+      <div class="row about-row text-center mb-5">
+        <h1 class="col about-header">About Me</h1>
+      </div>
+      <div class="row about-row text-center px-3">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="about-img">
+            <img src="../static/assets/luji.jpg" class="rounded-pill shadow-lg" />
           </div>
-          <div class="col-lg-6 d-flex flex-column justify-content-center">
-            <div class="about-text rounded">
-              <p>
-                I'm Zulfajri, a 6th-semester Information Technology student at the University of Insan Pembangunan Indonesia. I've been fascinated by the world of web development since I was at my first semester. I'm incredibily excited to
-                share my konwledge and experiences with all of you. <br />✨Thanks for visiting my page!✨
-              </p>
-              <div class="skills mx-auto rounded">
-                <img src="../static/assets/icons.png" alt="skills" />
-              </div>
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <div class="about-text rounded">
+            <p>
+              I'm Zulfajri, a 6th-semester Information Technology student at the University of Insan Pembangunan Indonesia. I've been fascinated by the world of web development since I was at my first semester. I'm incredibily excited to
+              share my konwledge and experiences with all of you. <br />✨Thanks for visiting my page!✨
+            </p>
+            <div class="skills mx-auto rounded">
+              <img src="../static/assets/icons.png" alt="skills" />
             </div>
           </div>
         </div>
@@ -122,7 +132,7 @@
               <img src="../static/assets/todoApp-capture.png" class="card-img-top" alt="Project Image" />
               <div class="card-body">
                 <h5 class="card-title">
-                  <a href="https://github.com/Lujiluz/todoApp" target="_blank">todoApp <img src="../static/assets/github-light.svg" width="20px" class="pb-1 ms-2" /></a>
+                  <a href="https://github.com/Lujiluz/todoApp" target="_blank">todoApp <img src="{{url_for('static', filename='/assets/go-to-arrow.svg')}}" width="10px" /></a>
                 </h5>
                 <p class="card-text">a simple todo list application to understand basic usage of React.</p>
                 <div class="tech-stack mb-4 rounded">
@@ -153,27 +163,25 @@
 
     <!-- contact section -->
     <section id="contact">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <h1 class="col projects-header mt-4">Get in Touch!</h1>
-        </div>
-        <div class="row">
-          <div class="col-md-6 offset-md-3 myForm rounded">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="email" placeholder="nickname" />
-              <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Fan Message" id="message" style="height: 100px"></textarea>
-              <label for="floatingTextarea2">Message</label>
-            </div>
-            <div class="wrapper d-flex align-items-center justify-content-between">
-              <button type="button" class="btn-msg rounded" onclick="send_message()">Leave a Message</button>
-              <div class="social-media d-flex justify-content-center">
-                <a href="https://github.com/Lujiluz" target="_blank"><img src="../static/assets/github-light.svg" width="20px" class="mx-2" /></a>
-                <a href="https://www.instagram.com/luji.archive/" target="_blank"><img src="../static/assets/instagram.svg" width="20px" class="mx-2" /></a>
-                <a href="https://www.linkedin.com/in/zul-fajri-227179229" target="_blank"><img src="../static/assets/linkedin.svg" width="20px" class="mx-2" /></a>
-              </div>
+      <div class="row text-center">
+        <h1 class="col projects-header mt-4">Get in Touch!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3 myForm rounded">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="person_sender" placeholder="nickname" />
+            <label for="floatingInput">Name or company name</label>
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Fan Message" id="message" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Message</label>
+          </div>
+          <div class="wrapper d-flex align-items-center justify-content-between">
+            <button type="button" class="btn-msg rounded" onclick="send_message()">Leave a Message</button>
+            <div class="social-media d-flex justify-content-center">
+              <a href="https://github.com/Lujiluz" target="_blank"><img src="../static/assets/github-light.svg" width="20px" class="mx-2" /></a>
+              <a href="https://www.instagram.com/luji.archive/" target="_blank"><img src="../static/assets/instagram.svg" width="20px" class="mx-2" /></a>
+              <a href="https://www.linkedin.com/in/zul-fajri-227179229" target="_blank"><img src="../static/assets/linkedin.svg" width="20px" class="mx-2" /></a>
             </div>
           </div>
         </div>

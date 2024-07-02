@@ -22,16 +22,28 @@ body {
   color: #ffe600;
 }
 
-.navbar {
+.navbar,
+.offcanvas {
   background-color: #1e1e1e;
+  border-bottom: 2px solid #ffe600;
+}
+
+.btn-close {
+  filter: invert(1);
 }
 
 /* hero section styling */
 #home {
-  height: 65vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hero-text {
-  margin: 50px 0 60px 0;
+
+/*  */
+.cta-container {
+  margin-top: 50px;
 }
 .hero-text > h1 {
   font-weight: bold;
@@ -59,22 +71,22 @@ body {
 }
 
 /* about section styling */
-#about > .container {
-  margin-top: 30px;
-  margin-bottom: 100px;
-  padding-top: 60px;
-  width: 100%;
-}
 
 .about-img img {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   filter: brightness(75%);
 }
 
 .about-text {
-  padding: 20px;
+  padding: 30px 20px;
+  color: white;
+  background-color: #1e1e1e;
   box-shadow: 0 0.3rem 1rem #ffe60042;
+}
+
+.about-row {
+  width: 100%;
 }
 
 .skills {
@@ -89,10 +101,7 @@ body {
 }
 
 /* projects section style */
-#projects > .container {
-  margin-top: 30px;
-  padding-top: 60px;
-}
+
 .tech-stack {
   border: 1px solid #ffe600;
   margin-top: 30px;
@@ -103,6 +112,13 @@ body {
 .card-body > h5 > a {
   text-decoration: none;
   color: white;
+  transition: 0.3s;
+}
+
+.card-body > h5 > a > img {
+  padding-bottom: 15px;
+  margin-left: -2px;
+  transition: 0.3s;
 }
 
 .card-body > h5 > a:hover {
@@ -115,9 +131,13 @@ body {
 }
 
 /* contact section styling */
+
 #contact {
-  height: 80vh;
-  margin-top: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
   background-color: #ffe600;
   color: black;
 }
@@ -151,4 +171,37 @@ body {
   margin-top: 20px;
   padding: 5px 10px;
   height: fit-content;
+}
+
+/* all section style */
+#about {
+  height: 600px;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe600;
+  color: black;
+}
+
+#projects {
+  padding-bottom: 50px;
+}
+
+@media (max-width: 480px) {
+  #about,
+  #projects {
+    padding: 0px 30px;
+  }
+
+  #about {
+    height: 800px;
+    padding: 30px 0px;
+    margin-bottom: 5rem;
+  }
+
+  .tech-stack {
+    margin: 0px auto;
+  }
 }

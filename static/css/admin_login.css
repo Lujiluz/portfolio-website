@@ -1,0 +1,33 @@
+* {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  background-color: #353535;
+}
+
+.btn-login {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #ffe600;
+  width: 100%;
+  transition: 0.4s ease;
+}
+.btn-login:hover {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #ffe600;
+  color: black;
+  border: 1px solid #ffe600;
+}

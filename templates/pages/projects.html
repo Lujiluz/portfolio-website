@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- meta tags -->
+    <meta property="og:title" content="Zulfajri | Personal Website" />
+    <meta property="og:description" content="a portfolio website of Zulfajri" />
+    <meta property="og:image" content="{{ url_for('static', filename='Lj..svg') }}" />
+    <link rel="icon" type="image/svg+xml" href="../static/Lj..svg" />
+
+    <!-- Link Animasi AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Link Icon -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- sweet alert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <title>Luji Dashboard | Projects</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/admin_dashboard.css')}}" />
+  </head>
+  <body>
+    <!-- sidebar -->
+    {% with page=page %} {% include '/components/sidebar.html' %} {% endwith %}
+    <!-- end sidebar -->
+    <div class="main-content">
+      <p>Projects Page</p>
+    </div>
+  </body>
+  <!-- javascript -->
+  <script src="{{url_for('static', filename='admin_dashboard.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

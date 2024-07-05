@@ -1,0 +1,127 @@
+<div class="sidebar active text-white">
+  <div class="top">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='lj..svg') }}" alt="logo" class="logo-img" />
+    </div>
+    <i class="bx bx-menu" id="btn-toggle"></i>
+  </div>
+  <div class="user">
+    <img src="{{ url_for('static', filename='assets/luji.jpg') }}" alt="me" class="user-img" />
+    <div class="admin-name">
+      <span>Zulfajri <br /></span>
+      <span>Admin</span>
+    </div>
+  </div>
+  {% if page == 'dashboard' %}
+  <ul>
+    <li>
+      <a href="/admin/dashboard" class="active">
+        <i class="bx bx-home-alt"></i>
+        <span class="nav-item">Home</span>
+      </a>
+      <span class="tool-tip">Home</span>
+    </li>
+    <li>
+      <a href="/admin/projects" class="">
+        <i class="bx bx-collection"></i>
+        <span class="nav-item">Projects</span>
+      </a>
+      <span class="tool-tip">Projects</span>
+    </li>
+    <li>
+      <a href="/admin/writings" class="">
+        <i class="bx bx-message-alt-edit"></i>
+        <span class="nav-item">Writings</span>
+      </a>
+      <span class="tool-tip">Writings</span>
+    </li>
+    <li>
+      <a class="" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="bx bx-log-out"></i>
+        <span class="nav-item">Logout</span>
+      </a>
+      <span class="tool-tip">Logout</span>
+    </li>
+  </ul>
+
+  {% elif page == 'projects' %}
+  <ul>
+    <li>
+      <a href="/admin/dashboard" class="">
+        <i class="bx bx-home-alt"></i>
+        <span class="nav-item">Home</span>
+      </a>
+      <span class="tool-tip">Home</span>
+    </li>
+    <li>
+      <a href="/admin/projects" class="active">
+        <i class="bx bx-collection"></i>
+        <span class="nav-item">Projects</span>
+      </a>
+      <span class="tool-tip">Projects</span>
+    </li>
+    <li>
+      <a href="/admin/writings" class="">
+        <i class="bx bx-message-alt-edit"></i>
+        <span class="nav-item">Writings</span>
+      </a>
+      <span class="tool-tip">Writings</span>
+    </li>
+    <li>
+      <a class="" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="bx bx-log-out"></i>
+        <span class="nav-item">Logout</span>
+      </a>
+      <span class="tool-tip">Logout</span>
+    </li>
+  </ul>
+  {% elif page == 'writings' %}
+  <ul>
+    <li>
+      <a href="/admin/dashboard" class="">
+        <i class="bx bx-home-alt"></i>
+        <span class="nav-item">Home</span>
+      </a>
+      <span class="tool-tip">Home</span>
+    </li>
+    <li>
+      <a href="/admin/projects" class="">
+        <i class="bx bx-collection"></i>
+        <span class="nav-item">Projects</span>
+      </a>
+      <span class="tool-tip">Projects</span>
+    </li>
+    <li>
+      <a href="/admin/writings" class="active">
+        <i class="bx bx-message-alt-edit"></i>
+        <span class="nav-item">Writings</span>
+      </a>
+      <span class="tool-tip">Writings</span>
+    </li>
+    <li>
+      <a class="" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <i class="bx bx-log-out"></i>
+        <span class="nav-item">Logout</span>
+      </a>
+      <span class="tool-tip">Logout</span>
+    </li>
+  </ul>
+  {% endif %}
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">Log out</h1>
+        <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body fs-6 my-5">Are you sure you want to log out?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger">yes, Logout please</button>
+      </div>
+    </div>
+  </div>
+</div>

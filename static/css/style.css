@@ -72,9 +72,15 @@ body {
 
 /* about section styling */
 
+.about-img {
+  width: fit-content;
+}
+
 .about-img img {
-  width: 100%;
-  max-width: 250px;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  object-fit: cover;
   filter: brightness(75%);
 }
 

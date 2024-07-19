@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/admin_dashboard.css')}}" />
   </head>
   <body>
+    <!-- loading overlay -->
+    {% include '/components/loading_overlay.html' %}
+    <!-- end loading overlay -->
     <!-- sidebar -->
     {% with page=page %} {% include '/components/sidebar.html' %} {% endwith %}
     <!-- end sidebar -->

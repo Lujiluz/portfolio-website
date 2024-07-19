@@ -1,4 +1,4 @@
-<div class="sidebar active text-white">
+<div class="sidebar text-white">
   <div class="top">
     <div class="logo">
       <img src="{{ url_for('static', filename='lj..svg') }}" alt="logo" class="logo-img" />
@@ -120,7 +120,7 @@
       <div class="modal-body fs-6 my-5">Are you sure you want to log out?</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger">yes, Logout please</button>
+        <button type="button" class="btn btn-danger" onclick="handleLogout()">yes, Logout please</button>
       </div>
     </div>
   </div>

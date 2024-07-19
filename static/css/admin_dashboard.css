@@ -192,6 +192,7 @@ body {
   width: calc(100% - 80px);
   padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -213,3 +214,49 @@ body {
   background-color: #ceba00;
   color: black;
 }
+
+/* loading overlay */
+.loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.loading-overlay svg {
+  width: 100px;
+  height: 100px;
+  fill: yellow;
+}
+/* end loading overlay */
+
+/* projects */
+/* .projects-cards .row .col {
+  background-color: salmon;
+  margin-right: 10px;
+} */
+
+.add-project {
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.add-project a {
+  text-decoration: none;
+  color: black;
+}
+
+#project-thumbnail,
+#project-name,
+#project-description,
+#project-link {
+  background-color: #353535;
+  box-shadow: none !important;
+  color: white;
+}
+/* end projects */

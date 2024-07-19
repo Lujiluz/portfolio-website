@@ -19,15 +19,28 @@ body {
   margin-top: 20px;
   padding: 5px 10px;
   background-color: #1e1e1e;
+  border: none !important;
+
   color: white;
-  border: 1px solid #ffe600;
   width: 100%;
+  height: 40px;
   transition: 0.4s ease;
 }
 .btn-login:hover {
   margin-top: 20px;
   padding: 5px 10px;
-  background-color: #ffe600;
-  color: black;
-  border: 1px solid #ffe600;
+  background-color: rgb(31, 31, 31);
+}
+
+.form-control {
+  background-color: rgb(36, 36, 36) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+svg {
+  width: fit-content;
+  height: 100%;
+  display: inline-block;
 }

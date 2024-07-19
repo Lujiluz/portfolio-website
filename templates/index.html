@@ -111,50 +111,8 @@
         <div class="row text-center mb-5">
           <h1 class="col projects-header">Projects</h1>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          <div class="col">
-            <div class="card h-100 bg-dark text-light">
-              <img src="../static/assets/lujiAIS-capture.jpeg" class="card-img-top" alt="Project Image" />
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="https://github.com/Lujiluz/LujiAIS" target="_blank">LujiAIS <img src="../static/assets/github-light.svg" width="20px" class="pb-1 ms-2" /></a>
-                </h5>
-                <p class="card-text">a simple Academic Information System. Built in Java.</p>
-                <div class="tech-stack mb-4 rounded">
-                  <img src="../static/assets/java.svg" width="20px" class="mx-2" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 bg-dark text-light">
-              <img src="../static/assets/todoApp-capture.png" class="card-img-top" alt="Project Image" />
-              <div class="card-body">
-                <h5 class="card-title">
-                  <a href="https://github.com/Lujiluz/todoApp" target="_blank">todoApp <img src="{{url_for('static', filename='/assets/go-to-arrow.svg')}}" width="10px" /></a>
-                </h5>
-                <p class="card-text">a simple todo list application to understand basic usage of React.</p>
-                <div class="tech-stack mb-4 rounded">
-                  <img src="../static/assets/reactjs.svg" width="20px" class="mx-2" />
-                  <img src="../static/assets/tailwind.svg" width="20px" class="mx-2" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 bg-dark text-light">
-              <img src="../static/assets/ramadhanApp-capture.png" class="card-img-top" alt="Project Image" />
-              <div class="card-body">
-                <h5 class="card-title">RamadhanApp</h5>
-                <p class="card-text">(currently) building a simple ramadhan app. note: I haven't post it on github, yet.</p>
-                <div class="tech-stack mb-4 rounded">
-                  <img src="../static/assets/reactjs.svg" width="20px" class="mx-2" />
-                  <img src="../static/assets/tailwind.svg" width="20px" class="mx-2" />
-                  <img src="../static/assets/python.svg" width="20px" class="mx-2" />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="project-cards w-75 mx-auto">
+          <div class="row d-flex justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="card-container"></div>
         </div>
       </div>
     </section>

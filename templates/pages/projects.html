@@ -29,12 +29,64 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/admin_dashboard.css')}}" />
   </head>
   <body>
+    <!-- loading overlay -->
+    {% include '/components/loading_overlay.html' %}
+    <!-- end loading overlay -->
+
     <!-- sidebar -->
     {% with page=page %} {% include '/components/sidebar.html' %} {% endwith %}
     <!-- end sidebar -->
     <div class="main-content">
-      <p>Projects Page</p>
+      <div class="add-project w-75 mb-4 py-1 text-center rounded" id="modal-new-project">
+        <a href="#">
+          <i class="bx bx-plus"></i>
+          <span class="pb-2">new project</span>
+        </a>
+      </div>
+      <div class="projects-cards w-75">
+        <div class="row d-flex justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="card-container"></div>
+      </div>
     </div>
+
+    <!-- modal for add new project -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- modal header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- modal body -->
+          <div class="modal-body text-start">
+            <div class="mb-3">
+              <label for="project-thumbnail" class="form-label">Project thumbnail</label>
+              <input class="form-control" type="file" id="project-thumbnail" />
+              <!-- thumbnail preview -->
+              <img src="{{ url_for('static', filename='assets/rapz-hair-studio.png') }}" class="mt-3 w-50" id="preview_img" alt="profile_img" style="display: none" />
+            </div>
+            <div class="mb-3">
+              <label for="project-name" class="form-label">Project Name</label>
+              <input type="text" class="form-control" id="project-name" />
+            </div>
+            <div class="mb-3">
+              <label for="project-link" class="form-label">Project Link</label>
+              <input type="text" class="form-control" id="project-link" />
+            </div>
+            <div class="mb-3">
+              <label for="project-description" class="form-label">Project Description</label>
+              <textarea class="form-control" id="project-description" rows="3"></textarea>
+            </div>
+          </div>
+          <!-- modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="handleNewProject()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
   </body>
   <!-- javascript -->
   <script src="{{url_for('static', filename='admin_dashboard.js')}}"></script>

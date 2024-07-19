@@ -29,15 +29,20 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/admin_dashboard.css')}}" />
   </head>
   <body>
-    <!-- sidebar -->
-    {% with page=page %} {% include '/components/sidebar.html' %} {% endwith %}
-    <!-- end sidebar -->
+    <!-- loading overlay -->
+    {% include '/components/loading_overlay.html' %}
+    <!-- end loading overlay -->
+    <div class="content">
+      <!-- sidebar -->
+      {% with page=page %} {% include '/components/sidebar.html' %} {% endwith %}
+      <!-- end sidebar -->
 
-    <div class="main-content">
-      <p>Halaman ini masih dalam pengerjaan...😴</p>
+      <div class="main-content">
+        <p>Halaman ini masih dalam pengerjaan...😴</p>
+      </div>
     </div>
   </body>
   <!-- javascript -->
-  <script src="{{url_for('static', filename='admin_dashboard.js')}}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='admin_dashboard.js')}}"></script>
 </html>
